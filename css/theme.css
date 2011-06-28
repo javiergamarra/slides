@@ -24,7 +24,7 @@ section {
 }
 
 .title {
-	font-size: 80px;
+	font-size: 70px;
 	text-align: center;
 }
 
@@ -40,7 +40,7 @@ section {
 	top: 0px;
 	display: block;
 	overflow: hidden;
-	background: #2F93C6;
+	background: red;
 	background: -webkit-gradient(linear, left top, left bottom, from(#2F93C6),
 		to(#23587B) );
 	background: -moz-linear-gradient(top, #2F93C6, #23587B);
@@ -72,8 +72,6 @@ section {
 	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 	background: #f6f7dd;
-	-moz-transform: scale(0.8);
-	-o-transform: scale(0.8);
 }
 
 .slide.current {
