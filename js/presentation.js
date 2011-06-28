@@ -16,10 +16,20 @@ var SlideShow = function(slides) {
 	});
 
 	$(".slide").click(function(event) {
-		t.index = Number(event.target.id.replace('slide_', ''));
+		var parentDiv = findParentDiv(event.target);
+		t.index = Number(parentDiv.id.replace('slide_', ''));
 		t.update();
 	});
 };
+
+var findParentDiv = function(node) {
+	if (node.className.substr(0, 5) == 'slide') {
+		return node;
+	} else {
+		return findParentDiv(node.parentElement);
+	}
+};
+
 
 SlideShow.prototype = {
 	slides : [],
