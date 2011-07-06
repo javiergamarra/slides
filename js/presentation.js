@@ -16,9 +16,11 @@ var SlideShow = function(slides) {
 	});
 
 	$(".slide").click(function(event) {
-		var parentDiv = findParentDiv(event.target);
-		t.index = Number(parentDiv.id.replace('slide_', ''));
-		t.update();
+		if (event.target.className != 'link') {
+			var parentDiv = findParentDiv(event.target);
+			t.index = Number(parentDiv.id.replace('slide_', ''));
+			t.update();
+		}
 	});
 };
 
@@ -57,13 +59,13 @@ SlideShow.prototype = {
 	handleKeys : function(e) {
 		switch (e.keyCode) {
 		case 37: // left arrow
-			this.prev();
-			break;
-		case 39: // right arrow
-			this.next();
-			break;
-		}
+		this.prev();
+		break;
+	case 39: // right arrow
+		this.next();
+		break;
 	}
+}
 };
 
 $(document).ready(function() {

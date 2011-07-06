@@ -71,6 +71,9 @@
 						<p class="title">Presentando al cliente</p>
 					</header>
 					<p>Un supermercado llamado Mercadona</p>
+					<p style="text-align:center" >
+						<img src="mercadona.jpg"/>
+					</p>
 				</section>
 			</div>
 			<div class="slide" id="slide_9">
@@ -285,11 +288,56 @@
 			<div class="slide" id="slide_21">
 				<section>
 					<header>
-						<p class="title">Decidir tarde</p>
+						<p class="title">Entregar rápido</p>
 					</header>
 				</section>
 			</div>
 			<div class="slide" id="slide_22">
+				<section>
+					<header>
+						<p class="title">Decidir tarde</p>
+					</header>
+				</section>
+			</div>
+			
+			<div class="slide" id="slide_23">
+				<section>
+				<header>
+						<p class="title">Solución en AWK de Gojko Adzic</p>
+					</header>
+					<p><pre>
+BEGIN {RS=",|\n"}
+/Apples|Pommes|Mele/{total+=100; apples++; if (apples%4==0) total-=100;}
+/Pommes/{pommes++; if (pommes%3==0) total-=100; }
+/Mele/{mele++; if (mele%2==0) total-=50;}
+/Cherries/{total+=75; cherries++; if (cherries%2==0) total-=20;}
+/Bananas/{total+=150; bananas++; if (bananas%2==0) total-=150;}
+//{fruit++; if (fruit%5==0) total-=200;}
+END{print total;}</pre></p>
+<p><a href="http://gojko.net/2011/05/26/sc2011-lean-code-solution-in-awk/" target="_blank" class="link">Solución de Gojko Adzic</a></p>
+			</section></div>
+			<div class="slide" id="slide_24">
+				<section>
+				<header>
+						<p class="title">Solución en Ruby de Chris Parsons</p>
+					</header>
+					<pre>
+  def apply_discount(item)
+    @count[item] += 1
+    if (details = DISCOUNT[item])
+      if @count[item] % details[:quantity] == 0
+        @total -= details[:discount]
+      end
+    end
+  end
+  PRICE = { 'A' => 50, 'B' => 30, 'C' => 20, 'D' => 15 }
+  DISCOUNT = { 'A' => {:quantity => 3, :discount => 20 }, 
+  'B' => { :quantity => 2, :discount => 15 } }
+</pre>
+<p><a href="https://github.com/chrismdp/checkout-kata" target="_blank" class="link">Soluciones de Chris Parsons</a> y  <a href="https://github.com/nhpatt/Checkout" target="_blank" class="link">Soluciones de nhpatt</a></p>
+			</section></div>	
+			
+			<div class="slide" id="slide_25">
 				<section>
 					<p class="title">"The quality of your software is inversely
 						proportional to how often you have to say no to your customer."</p>
