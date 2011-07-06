@@ -46,7 +46,7 @@ SlideShow.prototype = {
 		addClass(this.slides[this.index - 1], 'left-slide');
 		addClass(this.slides[this.index + 1], 'right-slide');
 		addClass(this.slides[this.index], 'current');
-
+		
 	},
 	next : function() {
 		this.index++;
@@ -56,6 +56,11 @@ SlideShow.prototype = {
 		this.index--;
 		this.update();
 	},
+	showComments : function() {
+		queryAll('.comments').forEach(function(div, i) {
+			div.style.display = div.style.display == 'block' ? 'none' : 'block';
+		});
+	},
 	handleKeys : function(e) {
 		switch (e.keyCode) {
 		case 37: // left arrow
@@ -63,6 +68,9 @@ SlideShow.prototype = {
 		break;
 	case 39: // right arrow
 		this.next();
+		break;
+	case 67: // right arrow
+		this.showComments();
 		break;
 	}
 }
