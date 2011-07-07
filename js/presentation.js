@@ -16,9 +16,11 @@ var SlideShow = function(slides) {
 	});
 
 	$(".slide").click(function(event) {
-		var parentDiv = findParentDiv(event.target);
-		t.index = Number(parentDiv.id.replace('slide_', ''));
-		t.update();
+		if (event.target.className != 'link') {
+			var parentDiv = findParentDiv(event.target);
+			t.index = Number(parentDiv.id.replace('slide_', ''));
+			t.update();
+		}
 	});
 };
 
@@ -29,7 +31,6 @@ var findParentDiv = function(node) {
 		return findParentDiv(node.parentElement);
 	}
 };
-
 
 SlideShow.prototype = {
 	slides : [],
@@ -55,16 +56,26 @@ SlideShow.prototype = {
 		this.index--;
 		this.update();
 	},
+	showComments : function() {
+		queryAll('.comments').forEach(
+				function(div, i) {
+					div.style.display = div.style.display == 'block' ? 'none'
+							: 'block';
+				});
+	},
 	handleKeys : function(e) {
 		switch (e.keyCode) {
 		case 37: // left arrow
-			this.prev();
-			break;
-		case 39: // right arrow
-			this.next();
-			break;
-		}
+		this.prev();
+		break;
+	case 39: // right arrow
+		this.next();
+		break;
+	case 67: // right arrow
+		this.showComments();
+		break;
 	}
+}
 };
 
 $(document).ready(function() {
