@@ -8,7 +8,9 @@ var SlideShow = function(slides) {
 	} else {
 		this.index = 0;
 	}
+
 	this.update();
+	this.colorHeaderWithComments();
 
 	var t = this;
 	$(document).keydown(function(event) {
@@ -56,6 +58,15 @@ SlideShow.prototype = {
 		this.index--;
 		this.update();
 	},
+	colorHeaderWithComments : function() {
+		queryAll('.slide').forEach(
+				function(div) {
+					if ($(div).find(".comments").length) {
+						$(div).find("header p").append(
+								' <span style="color: red">*</span>');
+					}
+				});
+	},
 	showComments : function() {
 		queryAll('.comments').forEach(
 				function(div, i) {
@@ -66,16 +77,16 @@ SlideShow.prototype = {
 	handleKeys : function(e) {
 		switch (e.keyCode) {
 		case 37: // left arrow
-		this.prev();
-		break;
-	case 39: // right arrow
-		this.next();
-		break;
-	case 67: // right arrow
-		this.showComments();
-		break;
+			this.prev();
+			break;
+		case 39: // right arrow
+			this.next();
+			break;
+		case 67: // right arrow
+			this.showComments();
+			break;
+		}
 	}
-}
 };
 
 $(document).ready(function() {
