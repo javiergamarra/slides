@@ -23,6 +23,13 @@ section {
 	overflow: hidden;
 }
 
+.comments {
+	font-size: 20px;
+	text-align: left;
+	color: grey;
+	display: none;
+}
+
 .title {
 	font-size: 70px;
 	text-align: center;
