@@ -11,14 +11,262 @@
 			<div class="slide" id="slide_0">
 				<section>
 					<header>
-						<p>Header 1</p>
+						<p class="title">Refactoring</p>
 					</header>
-					<p>Content 1</p>
-					<div class="comments">Prueba de comentarios</div>
+					<footer>
+						<p>Shameless self-promotion</p>
+						<p>
+							<a href="http://twitter.com/nhpatt">@nhpatt</a>
+						</p>
+						<p>
+							<a href="http://nhpatt.com">nhpatt.com</a>
+						</p>
+						<p>
+							<a href="http://gplus.to/nhpatt">nhpatt @gplus.to</a>
+						</p>
+					</footer>
+				</section>
+			</div>
+			<div class="slide" id="slide_1">
+				<section>
+					<header>
+						<p class="title">¿Qué es?</p>
+					</header>
+					<ul>
+						<li>Mejorar el diseño del código sin cambiar lo que hace</li>
+					</ul>
+				</section>
+			</div>
+			<div class="slide" id="slide_2">
+				<section>
+					<header>
+						<p class="title">EJEMPLO!</p>
+					</header>
 				</section>
 			</div>
 		</div>
+		<div class="slide" id="slide_3">
+			<section>
+				<header>
+					<p class="title">Definición (revisitada)</p>
+				</header>
+				<p>Improving the design of existing code without changing what
+					it does</p>
+				<p>Refactoring is the process of changing a software system in
+					such a way that it does not alter the external behaviour of the
+					code yet improves its internal structure</p>
+			</section>
+		</div>
+
+		<div class="slide" id="slide_4">
+			<section>
+				<header>
+					<p>¿Por qué?</p>
+				</header>
+				<ul>
+					<li>"Refactoring improves the design of software"
+						<div class="comments">El diseño del sistema empeora con el
+							tiempo</div>
+					</li>
+					<li>"Refactoring makes software easier to understand"
+						<div class="comments">Código ajeno (forma de entenderlo) y
+							propio</div></li>
+					<li>"Refactoring makes software helps you find bugs"
+						<div class="comments">Código más claro</div>
+					</li>
+					<li>"Refactoring helps you program faster"
+						<div class="comments">"I've found that refactoring helps me
+							write fast software. It slows the software in the short term
+							while I'm refactoring, but it makes the software easier to tune
+							during optimization."</div>
+					</li>
+					<li>"Refactoring and design"
+						<div class="comments">"With refactoring you find the balance
+							of work changes. You find that design, rather than occuring all
+							up front, occurs continuously during development."</div>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_5">
+			<section>
+				<header>
+					<p>¿Cuando?</p>
+				</header>
+				<ul>
+					<li>Cuando vas a escribir código duplicado
+						<div class="comments">"The first time you do something, you
+							just do it. The second time you do something similar, you wince
+							at the duplication, but you do the duplicate thing anyway. The
+							third time you do something similar, you refactor."</div></li>
+					<li>Cuando tienes que solucionar un bug</li>
+					<li>Cuando añades nuevas funcionalidades</li>
+				</ul>
+
+			</section>
+		</div>
+		<div class="slide" id="slide_6">
+			<section>
+				<header>
+					<p>¿Qué le cuento al _jefe_?</p>
+				</header>
+				<ul>
+					<li>Calidad, calidad, calidad!</li>
+					<li>O nada
+						<div class="comments">Many people say they are driven by
+							quality but are more driven by schedule. In these cases I give my
+							more controversial advice: Don't tell!</div>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_7">
+			<section>
+				<header>
+					<p>Problemas</p>
+				</header>
+				<ul>
+					<li>No hay tests ni red de seguridad - "Refactoring is risky"</li>
+					<li>Profundizar demasiado, hay que centrarse en refactors
+						pequeños</li>
+					<li>Fechas límites
+						<div class="comments">"The other time you should avoid
+							refactoring is when you are close to a deadline. At that point
+							the productivity gain from refactoring would appear after the
+							deadline and thus be too late."</div></li>
+					<li>Focalizar el esfuerzo (ROI)
+						<div class="comments">"You should concentrate on where the
+							risk is. Look at the code and see where it becomes complex. Look
+							at the function and consider the likely areas of error."</div>
+					</li>
+					<li>Tener en cuenta el sombrero que llevas
+						<div class="comments">"All this might take only ten minutes,
+							but during this time you should always be aware of which hat
+							you're wearing"</div></li>
+					<li>Interfaces públicas</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_8">
+			<section>
+				<header>
+					<p>¿Qué refactorizar?</p>
+				</header>
+				<p>Code Smells</p>
+				<ul>
+					<li>Código duplicado</li>
+					<li>Métodos y claseslargos</li>
+					<li>Métodos con muchos parámetros</li>
+					<li>Cambios divergentes y 'Shotgun Surgery'
+						<div class="comments">Una clase cambia por motivos
+							diferentes y un sólo cambio hay que hacerlo en miles de clases</div></li>
+					<li>Feature Envy</li>
+					<li>Data Clumps</li>
+					<li>Switch Statements</li>
+					<li>Copy & Paste Inheritance</li>
+					<li>Cadenas de mensajes (train wrecks) y viceversa</li>
+					<li>Data classes</li>
+					<li>Comentarios</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_9">
+			<section>
+				<header>
+					<p>Ejemplos</p>
+				</header>
+				<ul>
+					<li>Extraer método
+						<div class="comments">Problemas con variables locales</div></li>
+					<li>Inlines</li>
+					<li>Reemplazar método con método objeto</li>
+					<li>Mover método</li>
+					<li>Extraer clase/superclase</li>
+					<li>Reemplazar condicional con polimorfismo</li>
+					<li>Eliminar flags de control</li>
+					<li>Null object</li>
+					<li>Renombrados</li>
+					<li>Introducir objeto parámetro</li>
+					<li>Pull Up y Push Down</li>
+					<li>Form Template Method
+						<div class="comments">Ejemplo, generación de informes</div>
+					</li>
+
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_10">
+			<section>
+				<header>
+					<p>¿Cómo empezar?</p>
+				</header>
+				<ul>
+					<li>Saber parar es lo más importante
+						<div class="comments">Mostly, though, you'll know you're
+							getting it when you can stop with confidence. Stopping is the
+							strongest move in the refactorer's repertoire... That's when you
+							stop. If the code is already better, integrate and release what
+							you've done. If it isn't better, walk away. Flush it. Glad to
+							have learned a lesson, pity it didn't work out. What's on for
+							tomorrow?</div>
+					</li>
+					<li>Establecer objetivos
+						<div class="comments">"Get used to picking a goal."</div>
+					</li>
+					<li>Parar cuando no estás seguro</li>
+					<li>Dar marcha atrás si fallas</li>
+					<li>Pair programming!</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_11">
+			<section>
+				<header>
+					<p class="title">Notas</p>
+				</header>
+				<ul>
+					<li>"Any fool can write code that a computer can understand.
+						Good programmers write code that humans can understand"</li>
+					<li>Sobre rendimiento - "Until I profile I cannot tell how
+						much time is needed for the loop to calculate or whether the loop
+						is called often enough for it to affect the overall performance of
+						the system"</li>
+					<li>It is better to write and run incomplete tests than not to
+						run complete tests.</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_12">
+			<section>
+				<header>
+					<p class="title">Referencias y documentación</p>
+				</header>
+				<p>
+					<a href="http://www.youtube.com/user/parlezuml">Jason Gorman en
+						Youtube</a>
+				</p>
+				<p>
+					<a
+						href="http://books.google.com/books?id=1MsETFPD3I0C&printsec=frontcover&dq=refactoring&hl=es&ei=hLc1TpijNNDusgbKrI25Ag&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCkQ6AEwAA#v=onepage&q&f=false">Refactoring:
+						improving the design of existing code</a>, de Martin Fowler y Kent
+					Beck
+				</p>
+				<p>
+					<a
+						href="http://books.google.com/books?id=CQlRAAAAMAAJ&q=working+with+legacy&dq=working+with+legacy&hl=es&ei=jbc1ToOePMv0sgau24C7Ag&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCkQ6AEwAA">Working
+						effectively with legacy code</a>, de Michael Feathers
+				</p>
+			</section>
+		</div>
 	</div>
+		<div class="slide" id="slide_13">
+				<section>
+					<header>
+						<p class="title">¿Preguntas?</p>
+					</header>
+					<p></p>
+				</section>
+			</div>			
 	<script src="../js/jquery.js"></script>
 	<script src="../js/presentation.js"></script>
 </body>
