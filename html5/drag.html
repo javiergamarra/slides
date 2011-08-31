@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<title>Simple drag demo</title>
+<style>
+#drop {
+	height: 100px;
+	border: 5px solid #ccc;
+}
+</style>
+<img src="http://a2.twimg.com/profile_images/1210256780/avatar.jpg"
+	alt="nhpatt" />
+<img
+	src="https://twimg0-a.akamaihd.net/profile_images/1425697871/175203_10150105972243685_758268684_6289795_3043804_o.jpg"
+	alt="ethervoid" />
+<div id="drop"></div>
+<script>
+  var drop = document.getElementById("drop");
+  drop.ondrop = function (event) {
+    this.innerHTML += "<p>" + event.dataTransfer.getData("Text") + "</p>";
+  };
+  drop.ondragover = function () { return false; }; 
+</script>
