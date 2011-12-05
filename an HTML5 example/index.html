@@ -7,73 +7,60 @@
 </head>
 <body>
 	<div class="presentation">
-		<div class="slide" id="slide_0">
-			<section>
-				<header>
-					<p class="title">HTML 5</p>
-					<img src="logo.png"></img>
-				</header>
-				<div class="comments">
-					<i>CSS3 próximamente</i>
-				</div>
-			</section>
-		</div>
-		<div class="slide" id="slide_1">
-			<section>
-				<header>
-					<p>Nuevas semánticas</p>
-				</header>
-				<ul>
-					<li>&lt;header&gt;</li>
-					<li>&lt;footer&gt;</li>
-					<li>&lt;nav&gt;</li>
-					<li>&lt;section&gt;</li>
-					<li>&lt;article&gt;</li>
-					<li>&lt;aside&gt;</li>
-					<li>&lt;meter&gt;</li>
-					<li>&lt;progress&gt;</li>
-				</ul>
-			</section>
-		</div>
-		<div class="slide" id="slide_2">
+		<section class="slide" id="slide_0">
+			<header class=title>
+				HTML 5 <img src="logo.png"></img>
+			</header>
+			<div class="comments">
+				<i>CSS3 próximamente</i>
+			</div>
+		</section>
+
+		<section class="slide" id="slide_1">
+			<header class=title> Nuevas semánticas </header>
+			<ul>
+				<li>&lt;header&gt;</li>
+				<li>&lt;footer&gt;</li>
+				<li>&lt;nav&gt;</li>
+				<li>&lt;section&gt;</li>
+				<li>&lt;article&gt;</li>
+				<li>&lt;aside&gt;</li>
+				<li>&lt;meter&gt;</li>
+				<li>&lt;progress&gt;</li>
+			</ul>
+		</section>
+
+		<section class="slide" id="slide_2">
 			<img src="html5tags.png" width="100%" height="650px">
-		</div>
-		<div class="slide" id="slide_3">
-			<section>
-				<header>
-					<p>Geolocalización</p>
-				</header>
-				<ul>
-					<li>Localiza usando IP, Mac, WIFI e incluso GPS si tiene.</li>
-					<li>Compatible con Firefox, Chrome y Safari</li>
-				</ul>
-				<div class="comments">Ver codigo de ejemplo</div>
-			</section>
-		</div>
-		<div class="slide" id="slide_4">
-			<section>
-				<header>
-					<p>Storage</p>
-				</header>
-				<ul>
-					<li>Web Storage</li>
-					<li>Web SQL Database</li>
-				</ul>
-			</section>
-		</div>
-		<div class="slide" id="slide_5">
-			<section>
-				<header>
-					<p>Web Storage (Session y Local Storage)</p>
-				</header>
-				<p>
-					<textarea id="local_storage" placeholder="Type your text here..."></textarea>
-				<p />
-				<p id="date_local_storage"></p>
-				<p>
-					<button id="save_local_storage">Guardar</button>
-				</p>
-				<pre>
+		</section>
+
+		<section class="slide" id="slide_3">
+			<header class=title> Geolocalización </header>
+			<ul>
+				<li>Localiza usando IP, Mac, WIFI e incluso GPS si tiene.</li>
+				<li>Compatible con Firefox, Chrome y Safari</li>
+			</ul>
+			<div class="comments">Ver codigo de ejemplo</div>
+		</section>
+
+		<section class="slide" id="slide_4">
+			<header class=title> Storage </header>
+			<ul>
+				<li>Web Storage</li>
+				<li>Web SQL Database</li>
+			</ul>
+		</section>
+
+		<section class="slide" id="slide_5">
+			<header class=title> Web Storage (Session y Local Storage) </header>
+			<p>
+				<textarea id="local_storage" placeholder="Type your text here..."></textarea>
+			<p />
+			<p id="date_local_storage"></p>
+			<p>
+				<button id="save_local_storage">Guardar</button>
+			</p>
+			<pre>
 $("#save_local_storage").click(function() {
 	window.localStorage.setItem('value',
 	$("#local_storage").val());
@@ -81,124 +68,100 @@ $("#save_local_storage").click(function() {
 });
 $("#local_storage").val(window.localStorage.getItem('value'));
 					</pre>
-			</section>
-		</div>
+		</section>
 
-		<div class="slide" id="slide_6">
-			<section>
-				<header>
-					<p>Web SQL Database</p>
-				</header>
-				<pre>
+		<section class="slide" id="slide_6">
+			<header class=title> Web SQL Database </header>
+			<pre>
 var db = window.openDatabase("DBName", "1.0", "desc", 2*1024*1024);
 db.transaction(function(tx) {
   tx.executeSql("SELECT * FROM test", [], successCallback, errorCallback);
 });
 					</pre>
-				<p>El estándar de base de datos no está decidido aún (SQLite)</p>
-			</section>
-		</div>
+			<p>El estándar de base de datos no está decidido aún (SQLite)</p>
+		</section>
 
-		<div class="slide" id="slide_7">
-			<section>
-				<header>
-					<p>Cache y manifest</p>
-				</header>
-				<ul>
-					<li>Soportado por Firefox, Chrome, Safari, IOS y Android 2.0+</li>
-					<li>Muy útil para utilizar en aplicaciones para móviles</li>
-					<li>Fichero Manifest indicamos los ficheros necesarios por el
-						lado del cliente. Cache implicito</li>
-					<li>
-						<p>
-							CACHE MANIFEST<br /> # v = 1.0.0<br /> /style.css<br />
-							/javascripts/notes.js<br /> /javascripts/jquery.min.js
-						</p>
-					</li>
-					<li>#v = 1.0.0 -&gt; Indica versión. Al cambiar actualiza
-						ficheros.</li>
-					<li>&lt;html manifest="xxx.manifest"&gt;</li>
-				</ul>
-			</section>
-		</div>
-		<div class="slide" id="slide_8">
-			<section>
-				<header>
-					<p>Canvas</p>
-				</header>
-				<pre>
+		<section class="slide" id="slide_7">
+			<header class=title> Cache y manifest </header>
+			<ul>
+				<li>Soportado por Firefox, Chrome, Safari, IOS y Android 2.0+</li>
+				<li>Muy útil para utilizar en aplicaciones para móviles</li>
+				<li>Fichero Manifest indicamos los ficheros necesarios por el
+					lado del cliente. Cache implicito</li>
+				<li>
+					<p>
+						CACHE MANIFEST<br /> # v = 1.0.0<br /> /style.css<br />
+						/javascripts/notes.js<br /> /javascripts/jquery.min.js
+					</p>
+				</li>
+				<li>#v = 1.0.0 -&gt; Indica versión. Al cambiar actualiza
+					ficheros.</li>
+				<li>&lt;html manifest="xxx.manifest"&gt;</li>
+			</ul>
+		</section>
+
+		<section class="slide" id="slide_8">
+			<header class=title> Canvas </header>
+			<pre>
 &lt;canvas&gt;
 var ctx = document.querySelector(‘canvas’).getContext(‘2d’);
 ctx.fillRect(10, 20, 50, 50);
 </pre>
-				<canvas id="canvas"></canvas>
-				<script type="text/javascript">
-					var ctx = document.querySelector("canvas").getContext("2d");
-					ctx.fillRect(10, 20, 50, 50);
-				</script>
+			<canvas id="canvas"></canvas>
+			<script type="text/javascript">
+				var ctx = document.querySelector("canvas").getContext("2d");
+				ctx.fillRect(10, 20, 50, 50);
+			</script>
+			<ul>
+				<li>El núcleo del estándar</li>
+				<li>Forma el germen de WebGL</li>
+			</ul>
+			<div class="comments">
 				<ul>
-					<li>El núcleo del estándar</li>
-					<li>Forma el germen de WebGL</li>
+					<li><a
+						href="http://madebyevan.com/webgl-water/?utm_source=html5weekly&utm_medium=email">Water</a></li>
+					<li><a href="http://soulwire.co.uk/experiments/recursion-toy/">Recursion</a></li>
 				</ul>
-				<div class="comments">
-					<ul>
-						<li><a
-							href="http://madebyevan.com/webgl-water/?utm_source=html5weekly&utm_medium=email">Water</a></li>
-						<li><a
-							href="http://soulwire.co.uk/experiments/recursion-toy/">Recursion</a></li>
-					</ul>
-				</div>
-			</section>
-		</div>
-		<div class="slide" id="slide_9">
-			<section>
-				<header>
-					<p>Audio &amp; Video</p>
-				</header>
-				<pre>
+			</div>
+		</section>
+
+		<section class="slide" id="slide_9">
+			<header class=title> Audio &amp; Video </header>
+			<pre>
 video src=Examplevideo.ogv controls autoplay
 					</pre>
-				<video
-					src="http://upload.wikimedia.org/wikipedia/commons/6/65/Examplevideo.ogv"
-					controls>Use Chrome
-				</video>
-			</section>
-		</div>
+			<video
+				src="http://upload.wikimedia.org/wikipedia/commons/6/65/Examplevideo.ogv"
+				controls>Use Chrome
+			</video>
+		</section>
 
-		<div class="slide" id="slide_10">
-			<section>
-				<header>
-					<p>Audio &amp; Video</p>
-				</header>
-				<video
-					src=http://erunways.com/html5/WebM_VP8_video/html5_Video_VP8.webm
-					controls height="300px">Use Chrome
-				</video>
-			</section>
-		</div>
-		<div class="slide" id="slide_11">
-			<section>
-				<header>
-					<p>Audio &amp; Video</p>
-				</header>
-				<ul>
-					<li>Problema de codecs:
-						<ul>
-							<li>H264 (IE)</li>
-							<li>ogv (Firefox)</li>
-							<li>WebM (Chrome)</li>
-						</ul>
-					<li>Eventos</li>
-					<li>Captions</li>
-				</ul>
-			</section>
-		</div>
-		<div class="slide" id="slide_12">
-			<section>
-				<header>
-					<p>Drag &amp; Drop</p>
-				</header>
-				<pre>
+
+		<section class="slide" id="slide_10">
+			<header class=title> Audio &amp; Video </header>
+			<video
+				src=http://erunways.com/html5/WebM_VP8_video/html5_Video_VP8.webm
+				controls height="300px">Use Chrome
+			</video>
+		</section>
+
+		<section class="slide" id="slide_11">
+			<header class=title> Audio &amp; Video </header>
+			<ul>
+				<li>Problema de codecs:
+					<ul>
+						<li>H264 (IE)</li>
+						<li>ogv (Firefox)</li>
+						<li>WebM (Chrome)</li>
+					</ul>
+				<li>Eventos</li>
+				<li>Captions</li>
+			</ul>
+		</section>
+
+		<section class="slide" id="slide_12">
+			<header class=title> Drag &amp; Drop </header>
+			<pre>
 &lt;div draggable="true"&gt;This element be draggable&lt;/div&gt;
 var drop = document.getElementById("drop");
 drop.ondrop = function (event) {
@@ -206,96 +169,79 @@ drop.ondrop = function (event) {
 };
 drop.ondragover = function () { return false; }; 
 </pre>
-				<ul>
-					<li>API iniciada por IE 5.5</li>
-					<li>Aceptado dentro del estándar para lograr uniformidad</li>
-					<li>Muchas excepciones</li>
-					<li>El soporte de drag and drop de ficheros sólo funciona en
-						Chrome</li>
-				</ul>
-			</section>
-		</div>
-		<div class="slide" id="slide_13">
-			<section>
-				<header>
-					<p>Web sockets</p>
-				</header>
-				<ul>
-					<li>HTTP no permite conexión permanente</li>
-					<li>Web sockets permite conexión a un servidor</li>
-					<li>Eventos:
-						<ul>
-							<li>onOpen()</li>
-							<li>onMessage()</li>
-							<li>onClose()</li>
-						</ul>
-					</li>
-					<li>Parte cliente en un JS</li>
-					<li>Dos servidores: web y websockets</li>
-					<li>Código de ejemplo</li>
-				</ul>
-			</section>
-		</div>
-		<div class="slide" id="slide_14">
-			<section>
-				<header>
-					<p>Web workers</p>
-				</header>
-				<ul>
-					<li>JavaScript es mono hilo</li>
-					<li>Permite tareas en background en cliente</li>
-					<li>Cualquier JS puede ser un worker pero no puede tocar DOM</li>
-					<li>Flujo de trabajo:
-						<ul>
-							<li>Creación de worker</li>
-							<li>postMessage -&gt; Worker</li>
-							<li>Worker ejecuta la tarea y al termina de nuevo
-								postMessage</li>
-							<li>onMessage cambiamos el DOM</li>
-						</ul>
-					</li>
-					<li>Internet Explorer no soporta esta funcionalidad</li>
-				</ul>
-			</section>
-		</div>
-		<div class="slide" id="slide_15">
-			<section>
-				<header>
-					<p>Referencias</p>
-				</header>
-				<article>
+			<ul>
+				<li>API iniciada por IE 5.5</li>
+				<li>Aceptado dentro del estándar para lograr uniformidad</li>
+				<li>Muchas excepciones</li>
+				<li>El soporte de drag and drop de ficheros sólo funciona en
+					Chrome</li>
+			</ul>
+		</section>
+
+		<section class="slide" id="slide_13">
+			<header class=title> Web sockets </header>
+			<ul>
+				<li>HTTP no permite conexión permanente</li>
+				<li>Web sockets permite conexión a un servidor</li>
+				<li>Eventos:
 					<ul>
-						<li>HTML5 &amp; CSS3 por Brian P. Hogan</li>
-						<li>Dive into HTML5 / HTML5: Up and Running</li>
-						<li>Introducing HTML5 de Bruce Lawson y Remy Sharp</li>
+						<li>onOpen()</li>
+						<li>onMessage()</li>
+						<li>onClose()</li>
 					</ul>
-				</article>
-			</section>
-		</div>
-		<div class="slide" id="slide_16">
-			<section>
-				<header>
-					<p>Enlaces</p>
-				</header>
+				</li>
+				<li>Parte cliente en un JS</li>
+				<li>Dos servidores: web y websockets</li>
+				<li>Código de ejemplo</li>
+			</ul>
+		</section>
+
+		<section class="slide" id="slide_14">
+			<header class=title> Web workers </header>
+			<ul>
+				<li>JavaScript es mono hilo</li>
+				<li>Permite tareas en background en cliente</li>
+				<li>Cualquier JS puede ser un worker pero no puede tocar DOM</li>
+				<li>Flujo de trabajo:
+					<ul>
+						<li>Creación de worker</li>
+						<li>postMessage -&gt; Worker</li>
+						<li>Worker ejecuta la tarea y al termina de nuevo postMessage</li>
+						<li>onMessage cambiamos el DOM</li>
+					</ul>
+				</li>
+				<li>Internet Explorer no soporta esta funcionalidad</li>
+			</ul>
+		</section>
+
+		<section class="slide" id="slide_15">
+			<header class=title> Referencias </header>
+			<article>
 				<ul>
-					<li>HTML5: http://www.w3.org/TR/html5/</li>
-					<li><a href="http://www.w3.org/TR/websockets/">Web sockets
-					</a></li>
-					<li><a
-						href="http://html5test.com/?utm_source=html5weekly&utm_medium=email">Test
-							HTML5</a></li>
-					<li>Modernizer</li>
-					<li>Polifills</li>
+					<li>HTML5 &amp; CSS3 por Brian P. Hogan</li>
+					<li>Dive into HTML5 / HTML5: Up and Running</li>
+					<li>Introducing HTML5 de Bruce Lawson y Remy Sharp</li>
 				</ul>
-			</section>
-		</div>
-		<div class="slide" id="slide_17">
-			<section>
-				<header>
-					<p class="title">¿Dudas?</p>
-				</header>
-			</section>
-		</div>
+			</article>
+		</section>
+
+		<section class="slide" id="slide_16">
+			<header class=title> Enlaces </header>
+			<ul>
+				<li>HTML5: http://www.w3.org/TR/html5/</li>
+				<li><a href="http://www.w3.org/TR/websockets/">Web sockets
+				</a></li>
+				<li><a
+					href="http://html5test.com/?utm_source=html5weekly&utm_medium=email">Test
+						HTML5</a></li>
+				<li>Modernizer</li>
+				<li>Polifills</li>
+			</ul>
+		</section>
+
+		<section class="slide" id="slide_17">
+			<header class=title> ¿Dudas? </header>
+		</section>
 	</div>
 
 	<script src="../js/jquery.js"></script>
