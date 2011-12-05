@@ -7,370 +7,369 @@
 </head>
 <body>
 	<div class="presentation">
-		<div class="slides">
-			<div class="slide" id="slide_0">
-				<section>
-					<header>
-						<p class="title">Lean Code</p>
-					</header>
-					<p class="align-right">by Chris Parsons (@chrismdp)</p>
-				</section>
-			</div>
-			<div class="slide" id="slide_1">
-				<section>
-					<header>
-						<p class="title">¿Qué es Lean?</p>
-					</header>
-				</section>
-			</div>
-			<div class="slide" id="slide_2">
-				<section>
-					<header>
-						<p class="title">Lean Software Development</p>
-						<div class="comments">
-							<p>
-								<a class="link" target="_blank"
-									href="http://www.amazon.com/exec/obidos/ASIN/0321150783/poppendieckco-20">Lean
-									Software Development: An Agile Toolkit </a>
-							</p>
-							<p>
-								<a class="link" target="_blank"
-									href="http://www.amazon.com/exec/obidos/ASIN/0321437381/poppendieckco-20">Implementing
-									Lean Software Development: From Concept to Cash </a>
-							</p>
-							<p>
-								<a class="link" target="_blank"
-									href="http://www.amazon.com/exec/obidos/ASIN/0321620704/poppendieckco-20">Leading
-									Lean Software Development: Results Are not the Point </a>
-							</p>
-						</div>
-					</header>
-				</section>
-			</div>
-			<div class="slide" id="slide_3">
-				<section>
-					<header>
-						<p class="title">Eliminar waste (desperdicios)</p>
-					</header>
+		<div class="slide" id="slide_0">
+			<section>
+				<header>
+					<p class="title">Lean Code</p>
+				</header>
+				<p class="align-right">by Chris Parsons (@chrismdp)</p>
+			</section>
+		</div>
+		<div class="slide" id="slide_1">
+			<section>
+				<header>
+					<p class="title">¿Qué es Lean?</p>
+				</header>
+			</section>
+		</div>
+		<div class="slide" id="slide_2">
+			<section>
+				<header>
+					<p class="title">Lean Software Development</p>
 					<div class="comments">
-						<ul>
-							<li>Defectos</li>
-							<li>Esperas</li>
-							<li>Inventarios</li>
-							<li>Transporte</li>
-							<li>Sobreproduccion</li>
-							<li>Movimiento</li>
-							<li>Sobreproceso</li>
-						</ul>
-
+						<p>
+							<a class="link" target="_blank"
+								href="http://www.amazon.com/exec/obidos/ASIN/0321150783/poppendieckco-20">Lean
+								Software Development: An Agile Toolkit </a>
+						</p>
+						<p>
+							<a class="link" target="_blank"
+								href="http://www.amazon.com/exec/obidos/ASIN/0321437381/poppendieckco-20">Implementing
+								Lean Software Development: From Concept to Cash </a>
+						</p>
+						<p>
+							<a class="link" target="_blank"
+								href="http://www.amazon.com/exec/obidos/ASIN/0321620704/poppendieckco-20">Leading
+								Lean Software Development: Results Are not the Point </a>
+						</p>
 					</div>
+				</header>
+			</section>
+		</div>
+		<div class="slide" id="slide_3">
+			<section>
+				<header>
+					<p class="title">Eliminar waste (desperdicios)</p>
+				</header>
+				<div class="comments">
+					<ul>
+						<li>Defectos</li>
+						<li>Esperas</li>
+						<li>Inventarios</li>
+						<li>Transporte</li>
+						<li>Sobreproduccion</li>
+						<li>Movimiento</li>
+						<li>Sobreproceso</li>
+					</ul>
 
-				</section>
-			</div>
-			<div class="slide" id="slide_4">
-				<section>
-					<header>
-						<p class="title">Centrarse en el valor</p>
-					</header>
-				</section>
-			</div>
-			<div class="slide" id="slide_5">
-				<section>
-					<header>
-						<p class="title">Entregar rápido</p>
-					</header>
-					<div class="comments">Optimizar procesos!</div>
-				</section>
-			</div>
-			<div class="slide" id="slide_6">
-				<section>
-					<header>
-						<p class="title">Decidir tarde</p>
-					</header>
-					<div class="comments">Toyota Prius</div>
-				</section>
-			</div>
-			<div class="slide" id="slide_7">
-				<section>
-					<header>
-						<p class="title">¿Puede el código ser lean?</p>
-					</header>
-				</section>
-			</div>
-			<div class="slide" id="slide_8">
-				<section>
-					<header>
-						<p class="title">Presentando al cliente</p>
-					</header>
-					<p>Un supermercado llamado Mercadona</p>
-					<p style="text-align: center">
-						<img src="mercadona.jpg" />
-					</p>
-				</section>
-			</div>
-			<div class="slide" id="slide_9">
-				<section>
-					<header>
-						<p>Iteración 0</p>
-					</header>
-					<p>10 minutos para escojer una pareja y inicializar el entorno
-						de desarrollo</p>
-					<p>Escribir un programa que lea de línea de comandos, acepte
-						una entrada y la imprima</p>
-				</section>
-			</div>
-			<div class="slide" id="slide_10">
-				<section>
-					<header>
-						<p>Iteración 1</p>
-					</header>
-					<p>10 minutos para escribir un cajero sencillo</p>
-					<ul>
-						<li>'Manzanas' cuestan 1 euro, 'Bananas' cuestan 1.5 y
-							'Cerezas' 0.75</li>
-						<li>Aceptad cada una de esas palabras por cada línea de
-							entrada (stdin)</li>
-						<li>Imprimid el total en céntimos en stdout cada vez</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Manzanas -> 100</li>
-						<li>Cerezas -> 175</li>
-						<li>Cerezas -> 250</li>
-					</ul>
-				</section>
-			</div>
-			<div class="slide" id="slide_11">
-				<section>
-					<header>
-						<p>Iteración 2</p>
-					</header>
-					<p>10 minutos para añadir un descuento</p>
-					<ul>
-						<li>La misma entrada y salida que antes</li>
-						<li>Cada dos cerezas te ahorras 20 céntimos</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Manzanas -> 100</li>
-						<li>Cerezas -> 175</li>
-						<li>Cerezas -> 230</li>
-					</ul>
-				</section>
-			</div>
-			<div class="slide" id="slide_12">
-				<section>
-					<header>
-						<p>Iteración 3</p>
-					</header>
-					<p>10 minutos para permitir leer en formato CSV</p>
-					<ul>
-						<li>Aceptar los valores separados por comas</li>
-						<li>Los mismos precios que la iteración 2</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Manzanas, Cerezas, Bananas -> 325</li>
-						<li>Cerezas, Cerezas -> 130</li>
-					</ul>
-				</section>
-			</div>
-			<div class="slide" id="slide_13">
-				<section>
-					<header>
-						<p>Iteración 3a</p>
-					</header>
-					<p>No! Requisitos urgentes del negocio! La misma fecha límite.</p>
-					<ul>
-						<li>Las tiendas de Mercadona han sido notificadas del retraso
-							en el formato CSV</li>
-						<li>El formato de lectura vuelve a ser un elemento por línea</li>
-						<li>Las cerezas tienen ahora un descuento de 30 céntimos</li>
-						<li>Las bananas son ahora: 'compra dos y una te sale gratis'</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Cerezas -> 75</li>
-						<li>Cerezas -> 120</li>
-						<li>Bananas -> 270</li>
-						<li>Bananas -> 270</li>
-					</ul>
-				</section>
-			</div>
-			<div class="slide" id="slide_14">
-				<section>
-					<header>
-						<p>Iteración 4</p>
-					</header>
-					<p>10 minutos para soportar localización:</p>
-					<ul>
-						<li>Las tiendas de Mercadona siguen notificadas del retraso
-							en el formato CSV</li>
-						<li>Las cerezas vuelven al descuento de 20 céntimos</li>
-						<li>Tenemos que soportar las palabras 'Pommes' y 'Mele' para
-							manzanas</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Cerezas -> 75</li>
-						<li>Pommes -> 175</li>
-						<li>Cerezas -> 230</li>
-						<li>Bananas -> 380</li>
-						<li>Bananas -> 380</li>
-						<li>Manzanas -> 480</li>
-					</ul>
-				</section>
-			</div>
-			<div class="slide" id="slide_15">
-				<section>
-					<header>
-						<p>Iteración 5</p>
-					</header>
-					<p>10 minutos para soportar descuentos separados para
-						diferentes nombres:</p>
-					<ul>
-						<li>El cambio a formato CSV viene en la siguiente iteración</li>
-						<li>3 x Pommes se descuenta a 2 euros</li>
-						<li>2 x Mele se descuenta a 1.5</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Mele -> 100</li>
-						<li>Pommes -> 200</li>
-						<li>Pommes -> 300</li>
-						<li>Manzanas -> 400</li>
-						<li>Pommes -> 400</li>
-						<li>Mele -> 450</li>
-						<li>Cerezas -> 525</li>
-						<li>Cerezas -> 580</li>
-					</ul>
-				</section>
-			</div>
-			<div class="slide" id="slide_16">
-				<section>
-					<header>
-						<p>Iteración 5a</p>
-					</header>
-					<p>10 minutos para soportar descuentos separados para
-						diferentes nombres:</p>
-					<ul>
-						<li>UN NUEVO CAMBIO!</li>
-						<li>3 x Pommes se descuenta a 2 euros</li>
-						<li>2 x Mele se descuenta a 1 euro</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Mele -> 100</li>
-						<li>Pommes -> 200</li>
-						<li>Pommes -> 300</li>
-						<li>Manzanas -> 400</li>
-						<li>Pommes -> 400</li>
-						<li>Mele -> 400</li>
-						<li>Cerezas -> 475</li>
-						<li>Cerezas -> 530</li>
-						<li>Bananas -> 680</li>
-					</ul>
-				</section>
-			</div>
-			<div class="slide" id="slide_17">
-				<section>
-					<header>
-						<p>Iteración 6</p>
-					</header>
-					<p>10 minutos para terminar el formato CSV y aplicar
-						super-descuento:</p>
-					<ul>
-						<li>Soportar entrada tanto en formato línea como CSV</li>
-						<li>2 x Mele se descuenta a 1.5 euros</li>
-						<li>Compra 4 manzanas y ahorras otro euro</li>
-						<li>Compra 5 frutas y te ahorras 2 euros</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Mele, Pommes, Pommes, Mele -> 250</li>
-						<li>Bananas -> 200</li>
-					</ul>
-					<p>Test de aceptación</p>
-					<ul>
-						<li>Mele, Pommes, Pommes, Manzanas, Mele -> 150</li>
-					</ul>
-				</section>
-			</div>
-			<div class="slide" id="slide_18">
-				<section>
-					<header>
-						<p class="title">Conclusiones</p>
-					</header>
+				</div>
 
-					<div class="comments">
-						<ul>
-							<li>Quien ha acabado?</li>
-							<li>Alguien ha hecho tests? Y TDD?</li>
-							<li>Alguien ha usado repositorio de codigo?</li>
-							<li>Que problemas os habeis encontrado?</li>
-						</ul>
-					</div>
+			</section>
+		</div>
+		<div class="slide" id="slide_4">
+			<section>
+				<header>
+					<p class="title">Centrarse en el valor</p>
+				</header>
+			</section>
+		</div>
+		<div class="slide" id="slide_5">
+			<section>
+				<header>
+					<p class="title">Entregar rápido</p>
+				</header>
+				<div class="comments">Optimizar procesos!</div>
+			</section>
+		</div>
+		<div class="slide" id="slide_6">
+			<section>
+				<header>
+					<p class="title">Decidir tarde</p>
+				</header>
+				<div class="comments">Toyota Prius</div>
+			</section>
+		</div>
+		<div class="slide" id="slide_7">
+			<section>
+				<header>
+					<p class="title">¿Puede el código ser lean?</p>
+				</header>
+			</section>
+		</div>
+		<div class="slide" id="slide_8">
+			<section>
+				<header>
+					<p class="title">Presentando al cliente</p>
+				</header>
+				<p>Un supermercado llamado Mercadona</p>
+				<p style="text-align: center">
+					<img src="mercadona.jpg" />
+				</p>
+			</section>
+		</div>
+		<div class="slide" id="slide_9">
+			<section>
+				<header>
+					<p>Iteración 0</p>
+				</header>
+				<p>10 minutos para escojer una pareja y inicializar el entorno
+					de desarrollo</p>
+				<p>Escribir un programa que lea de línea de comandos, acepte una
+					entrada y la imprima</p>
+			</section>
+		</div>
+		<div class="slide" id="slide_10">
+			<section>
+				<header>
+					<p>Iteración 1</p>
+				</header>
+				<p>10 minutos para escribir un cajero sencillo</p>
+				<ul>
+					<li>'Manzanas' cuestan 1 euro, 'Bananas' cuestan 1.5 y
+						'Cerezas' 0.75</li>
+					<li>Aceptad cada una de esas palabras por cada línea de
+						entrada (stdin)</li>
+					<li>Imprimid el total en céntimos en stdout cada vez</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Manzanas -&gt; 100</li>
+					<li>Cerezas -&gt; 175</li>
+					<li>Cerezas -&gt; 250</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_11">
+			<section>
+				<header>
+					<p>Iteración 2</p>
+				</header>
+				<p>10 minutos para añadir un descuento</p>
+				<ul>
+					<li>La misma entrada y salida que antes</li>
+					<li>Cada dos cerezas te ahorras 20 céntimos</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Manzanas -&gt; 100</li>
+					<li>Cerezas -&gt; 175</li>
+					<li>Cerezas -&gt; 230</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_12">
+			<section>
+				<header>
+					<p>Iteración 3</p>
+				</header>
+				<p>10 minutos para permitir leer en formato CSV</p>
+				<ul>
+					<li>Aceptar los valores separados por comas</li>
+					<li>Los mismos precios que la iteración 2</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Manzanas, Cerezas, Bananas -&gt; 325</li>
+					<li>Cerezas, Cerezas -&gt; 130</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_13">
+			<section>
+				<header>
+					<p>Iteración 3a</p>
+				</header>
+				<p>No! Requisitos urgentes del negocio! La misma fecha límite.</p>
+				<ul>
+					<li>Las tiendas de Mercadona han sido notificadas del retraso
+						en el formato CSV</li>
+					<li>El formato de lectura vuelve a ser un elemento por línea</li>
+					<li>Las cerezas tienen ahora un descuento de 30 céntimos</li>
+					<li>Las bananas son ahora: 'compra dos y una te sale gratis'</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Cerezas -&gt; 75</li>
+					<li>Cerezas -&gt; 120</li>
+					<li>Bananas -&gt; 270</li>
+					<li>Bananas -&gt; 270</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_14">
+			<section>
+				<header>
+					<p>Iteración 4</p>
+				</header>
+				<p>10 minutos para soportar localización:</p>
+				<ul>
+					<li>Las tiendas de Mercadona siguen notificadas del retraso en
+						el formato CSV</li>
+					<li>Las cerezas vuelven al descuento de 20 céntimos</li>
+					<li>Tenemos que soportar las palabras 'Pommes' y 'Mele' para
+						manzanas</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Cerezas -&gt; 75</li>
+					<li>Pommes -&gt; 175</li>
+					<li>Cerezas -&gt; 230</li>
+					<li>Bananas -&gt; 380</li>
+					<li>Bananas -&gt; 380</li>
+					<li>Manzanas -&gt; 480</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_15">
+			<section>
+				<header>
+					<p>Iteración 5</p>
+				</header>
+				<p>10 minutos para soportar descuentos separados para diferentes
+					nombres:</p>
+				<ul>
+					<li>El cambio a formato CSV viene en la siguiente iteración</li>
+					<li>3 x Pommes se descuenta a 2 euros</li>
+					<li>2 x Mele se descuenta a 1.5</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Mele -&gt; 100</li>
+					<li>Pommes -&gt; 200</li>
+					<li>Pommes -&gt; 300</li>
+					<li>Manzanas -&gt; 400</li>
+					<li>Pommes -&gt; 400</li>
+					<li>Mele -&gt; 450</li>
+					<li>Cerezas -&gt; 525</li>
+					<li>Cerezas -&gt; 580</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_16">
+			<section>
+				<header>
+					<p>Iteración 5a</p>
+				</header>
+				<p>10 minutos para soportar descuentos separados para diferentes
+					nombres:</p>
+				<ul>
+					<li>UN NUEVO CAMBIO!</li>
+					<li>3 x Pommes se descuenta a 2 euros</li>
+					<li>2 x Mele se descuenta a 1 euro</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Mele -&gt; 100</li>
+					<li>Pommes -&gt; 200</li>
+					<li>Pommes -&gt; 300</li>
+					<li>Manzanas -&gt; 400</li>
+					<li>Pommes -&gt; 400</li>
+					<li>Mele -&gt; 400</li>
+					<li>Cerezas -&gt; 475</li>
+					<li>Cerezas -&gt; 530</li>
+					<li>Bananas -&gt; 680</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_17">
+			<section>
+				<header>
+					<p>Iteración 6</p>
+				</header>
+				<p>10 minutos para terminar el formato CSV y aplicar
+					super-descuento:</p>
+				<ul>
+					<li>Soportar entrada tanto en formato línea como CSV</li>
+					<li>2 x Mele se descuenta a 1.5 euros</li>
+					<li>Compra 4 manzanas y ahorras otro euro</li>
+					<li>Compra 5 frutas y te ahorras 2 euros</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Mele, Pommes, Pommes, Mele -&gt; 250</li>
+					<li>Bananas -&gt; 200</li>
+				</ul>
+				<p>Test de aceptación</p>
+				<ul>
+					<li>Mele, Pommes, Pommes, Manzanas, Mele -&gt; 150</li>
+				</ul>
+			</section>
+		</div>
+		<div class="slide" id="slide_18">
+			<section>
+				<header>
+					<p class="title">Conclusiones</p>
+				</header>
 
-				</section>
-			</div>
-			<div class="slide" id="slide_19">
-				<section>
-					<header>
-						<p class="title">Eliminar Waste</p>
+				<div class="comments">
+					<ul>
+						<li>Quien ha acabado?</li>
+						<li>Alguien ha hecho tests? Y TDD?</li>
+						<li>Alguien ha usado repositorio de codigo?</li>
+						<li>Que problemas os habeis encontrado?</li>
+					</ul>
+				</div>
 
-					</header>
-					<div class="comments">
-						<ul>
-							<li>Defects and Quality</li>
-							<li>80 - 20</li>
-							<li>bureaucracy</li>
-							<li>unnecessary code and functionality</li>
-							<li>delay in the software development process</li>
-							<li>unclear requirements</li>
-							<li>slow internal communication</li>
-						</ul>
-					</div>
-				</section>
-			</div>
-			<div class="slide" id="slide_20">
-				<section>
-					<header>
-						<p class="title">Centrarse en el valor</p>
-						<div class="comments">Que es valor?</div>
-					</header>
-				</section>
-			</div>
-			<div class="slide" id="slide_21">
-				<section>
-					<header>
-						<p class="title">Entregar rápido</p>
-					</header>
-					<div class="comments">Esperar al ultimo momento responsable</div>
-				</section>
-			</div>
-			<div class="slide" id="slide_22">
-				<section>
-					<header>
-						<p class="title">Decidir tarde</p>
-					</header>
-					<div class="comments">As software development is always
-						associated with some uncertainty, better results should be
-						achieved with an options-based approach, delaying decisions as
-						much as possible until they can be made based on facts and not on
-						uncertain assumptions and predictions. The more complex a system
-						is, the more capacity for change should be built into it, thus
-						enabling the delay of important and crucial commitments.</div>
+			</section>
+		</div>
+		<div class="slide" id="slide_19">
+			<section>
+				<header>
+					<p class="title">Eliminar Waste</p>
 
-				</section>
-			</div>
+				</header>
+				<div class="comments">
+					<ul>
+						<li>Defects and Quality</li>
+						<li>80 - 20</li>
+						<li>bureaucracy</li>
+						<li>unnecessary code and functionality</li>
+						<li>delay in the software development process</li>
+						<li>unclear requirements</li>
+						<li>slow internal communication</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		<div class="slide" id="slide_20">
+			<section>
+				<header>
+					<p class="title">Centrarse en el valor</p>
+					<div class="comments">Que es valor?</div>
+				</header>
+			</section>
+		</div>
+		<div class="slide" id="slide_21">
+			<section>
+				<header>
+					<p class="title">Entregar rápido</p>
+				</header>
+				<div class="comments">Esperar al ultimo momento responsable</div>
+			</section>
+		</div>
+		<div class="slide" id="slide_22">
+			<section>
+				<header>
+					<p class="title">Decidir tarde</p>
+				</header>
+				<div class="comments">As software development is always
+					associated with some uncertainty, better results should be achieved
+					with an options-based approach, delaying decisions as much as
+					possible until they can be made based on facts and not on uncertain
+					assumptions and predictions. The more complex a system is, the more
+					capacity for change should be built into it, thus enabling the
+					delay of important and crucial commitments.</div>
 
-			<div class="slide" id="slide_23">
-				<section>
-					<header>
-						<p class="title">Solución en AWK de Gojko Adzic</p>
-					</header>
-					<p>
-					<pre>
+			</section>
+		</div>
+
+		<div class="slide" id="slide_23">
+			<section>
+				<header>
+					<p class="title">Solución en AWK de Gojko Adzic</p>
+				</header>
+				<p>
+				<pre>
 BEGIN {RS=",|\n"}
 /Apples|Pommes|Mele/{total+=100; apples++; if (apples%4==0) total-=100;}
 /Pommes/{pommes++; if (pommes%3==0) total-=100; }
@@ -379,20 +378,19 @@ BEGIN {RS=",|\n"}
 /Bananas/{total+=150; bananas++; if (bananas%2==0) total-=150;}
 //{fruit++; if (fruit%5==0) total-=200;}
 END{print total;}</pre>
-					</p>
-					<p>
-						<a
-							href="http://gojko.net/2011/05/26/sc2011-lean-code-solution-in-awk/"
-							target="_blank" class="link">Solución de Gojko Adzic</a>
-					</p>
-				</section>
-			</div>
-			<div class="slide" id="slide_24">
-				<section>
-					<header>
-						<p class="title">Solución en Ruby de Chris Parsons</p>
-					</header>
-					<pre>
+				<p>
+					<a
+						href="http://gojko.net/2011/05/26/sc2011-lean-code-solution-in-awk/"
+						target="_blank" class="link">Solución de Gojko Adzic</a>
+				</p>
+			</section>
+		</div>
+		<div class="slide" id="slide_24">
+			<section>
+				<header>
+					<p class="title">Solución en Ruby de Chris Parsons</p>
+				</header>
+				<pre>
   def apply_discount(item)
     @count[item] += 1
     if (details = DISCOUNT[item])
@@ -405,22 +403,21 @@ END{print total;}</pre>
   DISCOUNT = { 'A' => {:quantity => 3, :discount => 20 }, 
   'B' => { :quantity => 2, :discount => 15 } }
 </pre>
-					<p>
-						<a href="https://github.com/chrismdp/checkout-kata"
-							target="_blank" class="link">Soluciones de Chris Parsons</a> y <a
-							href="https://github.com/nhpatt/Checkout" target="_blank"
-							class="link">Soluciones de nhpatt</a>
-					</p>
-				</section>
-			</div>
+				<p>
+					<a href="https://github.com/chrismdp/checkout-kata" target="_blank"
+						class="link">Soluciones de Chris Parsons</a> y <a
+						href="https://github.com/nhpatt/Checkout" target="_blank"
+						class="link">Soluciones de nhpatt</a>
+				</p>
+			</section>
+		</div>
 
-			<div class="slide" id="slide_25">
-				<section>
-					<p class="title">"The quality of your software is inversely
-						proportional to how often you have to say no to your customer."</p>
-					<p class="align-right">-- Uncle Bob Martin</p>
-				</section>
-			</div>
+		<div class="slide" id="slide_25">
+			<section>
+				<p class="title">"The quality of your software is inversely
+					proportional to how often you have to say no to your customer."</p>
+				<p class="align-right">-- Uncle Bob Martin</p>
+			</section>
 		</div>
 	</div>
 	<script src="../js/jquery.js"></script>

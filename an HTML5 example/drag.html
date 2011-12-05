@@ -13,9 +13,11 @@
 	alt="ethervoid" />
 <div id="drop"></div>
 <script>
-  var drop = document.getElementById("drop");
-  drop.ondrop = function (event) {
-    this.innerHTML += "<p>" + event.dataTransfer.getData("Text") + "</p>";
-  };
-  drop.ondragover = function () { return false; }; 
+	var drop = document.getElementById("drop");
+	drop.ondrop = function(event) {
+		this.innerHTML += "<p>" + event.dataTransfer.getData("Text") + "</p>";
+	};
+	drop.ondragover = function() {
+		return false;
+	};
 </script>

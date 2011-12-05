@@ -1,0 +1,47 @@
+.slide {
+	-webkit-transition: all 0s ease-in-out;
+	-moz-transition: all 0s ease-in-out;
+	-o-transition: all 0s ease-in-out;
+	transition: all 0s ease-in-out;
+	width: 90%;
+	height: 90%;
+	margin-top: -45%;
+	overflow: visible;
+}
+
+.slide.current {
+	margin-left: 0px;
+	left: 5%;
+}
+
+.note {
+	color: white;
+	bottom: -5%;
+	position: absolute;
+}
+
+.title {
+	margin-top: 200px;
+}
+
+.slide.left-slide {
+	margin-left: -2000px;
+}
+
+.slide.right-slide {
+	margin-left: 1100px;
+}
+
+.slide:nth-child(even) {
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+
+.slide:nth-child(odd) {
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+
+.lightningImage {
+	width: 500px;
+}
