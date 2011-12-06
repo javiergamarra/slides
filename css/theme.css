@@ -12,8 +12,8 @@ body {
 }
 
 header {
+	font-size: 70px;
 	font-weight: bold;
-	font-size: 40px;
 	text-align: center;
 }
 
@@ -31,7 +31,7 @@ ul li .comments {
 }
 
 section {
-	margin: 50px 30px 0;
+	padding: 50px 30px 0;
 	display: block;
 	overflow: hidden;
 }
@@ -43,13 +43,14 @@ section {
 	display: none;
 }
 
-.title {
-	font-size: 70px;
-	text-align: center;
-}
-
 .align-right {
 	text-align: right;
+}
+
+.title {
+	font-size: 90px;
+	margin-top: 200px;
+	text-align: center;
 }
 
 .presentation {

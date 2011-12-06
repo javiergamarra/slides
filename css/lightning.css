@@ -16,12 +16,8 @@
 
 .note {
 	color: white;
-	bottom: -10%;
+	bottom: -7%;
 	position: absolute;
-}
-
-.title {
-	margin-top: 200px;
 }
 
 .slide.left-slide {
@@ -43,5 +39,5 @@
 }
 
 .lightningImage {
-	width: 500px;
+	width: 400px;
 }

@@ -8,16 +8,17 @@
 <body>
 	<div class="presentation">
 		<section class="slide" id="slide_0">
-			<header class=title>
-				HTML 5 <img src="logo.png"></img>
-			</header>
+			<header class=title> HTML 5 </header>
+			<p style="text-align: center;">
+				<img src="logo.png" />
+			</p>
 			<div class="comments">
 				<i>CSS3 próximamente</i>
 			</div>
 		</section>
 
 		<section class="slide" id="slide_1">
-			<header class=title> Nuevas semánticas </header>
+			<header> Nuevas semánticas </header>
 			<ul>
 				<li>&lt;header&gt;</li>
 				<li>&lt;footer&gt;</li>
@@ -35,7 +36,7 @@
 		</section>
 
 		<section class="slide" id="slide_3">
-			<header class=title> Geolocalización </header>
+			<header> Geolocalización </header>
 			<ul>
 				<li>Localiza usando IP, Mac, WIFI e incluso GPS si tiene.</li>
 				<li>Compatible con Firefox, Chrome y Safari</li>
@@ -44,7 +45,7 @@
 		</section>
 
 		<section class="slide" id="slide_4">
-			<header class=title> Storage </header>
+			<header> Storage </header>
 			<ul>
 				<li>Web Storage</li>
 				<li>Web SQL Database</li>
@@ -52,7 +53,7 @@
 		</section>
 
 		<section class="slide" id="slide_5">
-			<header class=title> Web Storage (Session y Local Storage) </header>
+			<header> Web Storage (Session y Local Storage) </header>
 			<p>
 				<textarea id="local_storage" placeholder="Type your text here..."></textarea>
 			<p />
@@ -71,7 +72,7 @@ $("#local_storage").val(window.localStorage.getItem('value'));
 		</section>
 
 		<section class="slide" id="slide_6">
-			<header class=title> Web SQL Database </header>
+			<header> Web SQL Database </header>
 			<pre>
 var db = window.openDatabase("DBName", "1.0", "desc", 2*1024*1024);
 db.transaction(function(tx) {
@@ -82,7 +83,7 @@ db.transaction(function(tx) {
 		</section>
 
 		<section class="slide" id="slide_7">
-			<header class=title> Cache y manifest </header>
+			<header> Cache y manifest </header>
 			<ul>
 				<li>Soportado por Firefox, Chrome, Safari, IOS y Android 2.0+</li>
 				<li>Muy útil para utilizar en aplicaciones para móviles</li>
@@ -101,7 +102,7 @@ db.transaction(function(tx) {
 		</section>
 
 		<section class="slide" id="slide_8">
-			<header class=title> Canvas </header>
+			<header> Canvas </header>
 			<pre>
 &lt;canvas&gt;
 var ctx = document.querySelector(‘canvas’).getContext(‘2d’);
@@ -126,7 +127,7 @@ ctx.fillRect(10, 20, 50, 50);
 		</section>
 
 		<section class="slide" id="slide_9">
-			<header class=title> Audio &amp; Video </header>
+			<header> Audio &amp; Video </header>
 			<pre>
 video src=Examplevideo.ogv controls autoplay
 					</pre>
@@ -138,7 +139,7 @@ video src=Examplevideo.ogv controls autoplay
 
 
 		<section class="slide" id="slide_10">
-			<header class=title> Audio &amp; Video </header>
+			<header> Audio &amp; Video </header>
 			<video
 				src=http://erunways.com/html5/WebM_VP8_video/html5_Video_VP8.webm
 				controls height="300px">Use Chrome
@@ -146,7 +147,7 @@ video src=Examplevideo.ogv controls autoplay
 		</section>
 
 		<section class="slide" id="slide_11">
-			<header class=title> Audio &amp; Video </header>
+			<header> Audio &amp; Video </header>
 			<ul>
 				<li>Problema de codecs:
 					<ul>
@@ -160,7 +161,7 @@ video src=Examplevideo.ogv controls autoplay
 		</section>
 
 		<section class="slide" id="slide_12">
-			<header class=title> Drag &amp; Drop </header>
+			<header> Drag &amp; Drop </header>
 			<pre>
 &lt;div draggable="true"&gt;This element be draggable&lt;/div&gt;
 var drop = document.getElementById("drop");
@@ -179,7 +180,7 @@ drop.ondragover = function () { return false; };
 		</section>
 
 		<section class="slide" id="slide_13">
-			<header class=title> Web sockets </header>
+			<header> Web sockets </header>
 			<ul>
 				<li>HTTP no permite conexión permanente</li>
 				<li>Web sockets permite conexión a un servidor</li>
@@ -197,7 +198,7 @@ drop.ondragover = function () { return false; };
 		</section>
 
 		<section class="slide" id="slide_14">
-			<header class=title> Web workers </header>
+			<header> Web workers </header>
 			<ul>
 				<li>JavaScript es mono hilo</li>
 				<li>Permite tareas en background en cliente</li>
@@ -215,7 +216,7 @@ drop.ondragover = function () { return false; };
 		</section>
 
 		<section class="slide" id="slide_15">
-			<header class=title> Referencias </header>
+			<header> Referencias </header>
 			<article>
 				<ul>
 					<li>HTML5 &amp; CSS3 por Brian P. Hogan</li>
@@ -226,7 +227,7 @@ drop.ondragover = function () { return false; };
 		</section>
 
 		<section class="slide" id="slide_16">
-			<header class=title> Enlaces </header>
+			<header> Enlaces </header>
 			<ul>
 				<li>HTML5: http://www.w3.org/TR/html5/</li>
 				<li><a href="http://www.w3.org/TR/websockets/">Web sockets
