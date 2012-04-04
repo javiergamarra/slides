@@ -5,7 +5,7 @@
 	transition: all 0s ease-in-out;
 	width: 70%;
 	height: 80%;
-	margin-top: -40%;
+	margin-top: -45%;
 	overflow: visible;
 }
 
@@ -15,8 +15,9 @@
 }
 
 .note {
+	font-size: 20px;
 	color: white;
-	bottom: -7%;
+	bottom: -10%;
 	position: absolute;
 }
 
