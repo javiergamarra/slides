@@ -1,15 +1,9 @@
-var doc = document;
 var slideshow;
 
 var SlideShow = function(slides) {
 	this.slides = slides;
-	if (window.location.hash != "") {
-		this.index = Number(window.location.hash.replace('#slide', ''));
-	} else {
-		this.index = 0;
-	}
 
-	this.update();
+	this.loadCurrentSlide();
 	this.colorHeaderWithComments();
 
 	var t = this;
@@ -17,21 +11,14 @@ var SlideShow = function(slides) {
 		t.handleKeys(event);
 	});
 
-	$(".slide").click(function(event) {
-		if (event.target.className != 'link') {
-			var parentDiv = findParentDiv(event.target);
-			t.index = Number(parentDiv.id.replace('slide_', ''));
-			t.update();
-		}
+	$('.slide').each(function(i, div) {
+		$(div).click(function(event) {
+			if (event.target.className != 'link') {
+				t.index = i;
+				t.update();
+			}
+		});
 	});
-};
-
-var findParentDiv = function(node) {
-	if (node.className.substr(0, 5) == 'slide') {
-		return node;
-	} else {
-		return findParentDiv(node.parentElement);
-	}
 };
 
 SlideShow.prototype = {
@@ -58,21 +45,27 @@ SlideShow.prototype = {
 		this.index--;
 		this.update();
 	},
+	loadCurrentSlide : function() {
+		if (window.location.hash != "") {
+			this.index = Number(window.location.hash.replace('#slide', ''));
+		} else {
+			this.index = 0;
+		}
+		this.update();
+	},
 	colorHeaderWithComments : function() {
-		queryAll('.slide').forEach(
-				function(div) {
-					if ($(div).find(".comments").length) {
-						$(div).find("header p").append(
+		$('.slide').each(
+				function(i) {
+					if ($(this).find(".comments").length) {
+						$(this).find("header").append(
 								' <span style="color: red">*</span>');
 					}
 				});
 	},
 	showComments : function() {
-		queryAll('.comments').forEach(
-				function(div, i) {
-					div.style.display = div.style.display == 'block' ? 'none'
-							: 'block';
-				});
+		$('.current .comments').each(function(i) {
+			$(this).toggle();
+		});
 	},
 	handleKeys : function(e) {
 		switch (e.keyCode) {
@@ -82,7 +75,7 @@ SlideShow.prototype = {
 		case 39: // right arrow
 			this.next();
 			break;
-		case 67: // right arrow
+		case 67: // c key
 			this.showComments();
 			break;
 		}
@@ -90,20 +83,8 @@ SlideShow.prototype = {
 };
 
 $(document).ready(function() {
-	slideshow = new SlideShow(queryAll('.slide'));
+	slideshow = new SlideShow($('.slide').toArray());
 });
-
-var toArray = function(list) {
-	var results = [];
-	for ( var i = 0; i < list.length; i++) {
-		results.push(list[i]);
-	}
-	return results;
-};
-
-var queryAll = function(query) {
-	return toArray($(query));
-};
 
 var addClass = function(node, style) {
 	$(node).removeClass();
