@@ -4,54 +4,42 @@
 <meta charset="utf-8" />
 <title>a LEAN-CODE experience</title>
 <link href="../css/theme.css" rel="stylesheet" />
+<link href="../css/lightning.css" rel="stylesheet" />
 </head>
 <body>
 	<div class="presentation">
 		<section class="slide">
 			<header class=title> Lean Code </header>
-			<p class="align-right">by Chris Parsons (@chrismdp)</p>
+			<p>by Chris Parsons (@chrismdp)</p>
+		</section>
+
+		<section class="slide">
+			<header class=title>
+				@nhpatt	
+			</header>
 		</section>
 
 		<section class="slide">
 			<header class=title> ¿Qué es Lean? </header>
+			<div class="comments">focus on value, eliminar desperdicios. TPS: TPM, 5S, pokayoke, pull, kanban, OEE, kaizen, value stream mapping, kaizen. Ford. Forma de pensar.</div>
 		</section>
+
 
 		<section class="slide">
 			<header class=title>
 				Lean Software Development
 			</header>
-			<div class="comments">
-				<p>
-					<a class="link" target="_blank"
-						href="http://www.amazon.com/exec/obidos/ASIN/0321150783/poppendieckco-20">Lean
-						Software Development: An Agile Toolkit </a>
-				</p>
-				<p>
-					<a class="link" target="_blank"
-						href="http://www.amazon.com/exec/obidos/ASIN/0321437381/poppendieckco-20">Implementing
-						Lean Software Development: From Concept to Cash </a>
-				</p>
-				<p>
-					<a class="link" target="_blank"
-						href="http://www.amazon.com/exec/obidos/ASIN/0321620704/poppendieckco-20">Leading
-						Lean Software Development: Results Are not the Point </a>
-				</p>
-			</div>
 		</section>
 
 		<section class="slide">
-			<header class=title> Eliminar waste (desperdicios) </header>
-			<div class="comments">
-				<ul>
-					<li>Defectos</li>
-					<li>Esperas</li>
-					<li>Inventarios</li>
-					<li>Transporte</li>
-					<li>Sobreproduccion</li>
-					<li>Movimiento</li>
-					<li>Sobreproceso</li>
-				</ul>
-			</div>
+			<header class=title>
+				Lean Startup
+			</header>
+		</section>
+	
+		<section class="slide">
+			<header class=title> Eliminar waste </header>
+			<div class="comments">Defectos, Esperas, Inventarios, Transporte, Sobreproduccion, Movimiento, Sobreproceso</div>
 		</section>
 
 		<section class="slide">
@@ -60,12 +48,10 @@
 
 		<section class="slide">
 			<header class=title> Entregar rápido </header>
-			<div class="comments">Optimizar procesos!</div>
 		</section>
 
 		<section class="slide">
 			<header class=title> Decidir tarde </header>
-			<div class="comments">Toyota Prius</div>
 		</section>
 
 		<section class="slide">
@@ -74,7 +60,6 @@
 
 		<section class="slide">
 			<header> Presentando al cliente </header>
-			<p>Un supermercado llamado Mercadona</p>
 			<p style="text-align: center">
 				<img src="mercadona.jpg" />
 			</p>
@@ -82,21 +67,20 @@
 
 		<section class="slide">
 			<header> Iteración 0 </header>
-			<p>10 minutos para escojer una pareja y inicializar el entorno de
+			<p>8 minutos para escojer una pareja y inicializar el entorno de
 				desarrollo</p>
-			<p>Escribir un programa que lea de línea de comandos, acepte una
+			<p>Escribir un programa que acepte una
 				entrada y la imprima</p>
 		</section>
 
 		<section class="slide">
 			<header> Iteración 1 </header>
-			<p>10 minutos para escribir un cajero sencillo</p>
+			<p>8 minutos para escribir un cajero sencillo</p>
 			<ul>
 				<li>'Manzanas' cuestan 1 euro, 'Bananas' cuestan 1.5 y
 					'Cerezas' 0.75</li>
-				<li>Aceptad cada una de esas palabras por cada línea de entrada
-					(stdin)</li>
-				<li>Imprimid el total en céntimos en stdout cada vez</li>
+				<li>Aceptad cada una de esas palabras por vuestra entrada</li>
+				<li>Imprimid el total en céntimos por cada entrada</li>
 			</ul>
 			<p>Test de aceptación</p>
 			<ul>
@@ -107,8 +91,19 @@
 		</section>
 
 		<section class="slide">
+			<header> Iteración 1 </header>
+			<p>Demo</p>
+			<ul>
+				<li>Bananas -&gt; 150</li>
+				<li>Bananas -&gt; 300</li>
+				<li>Manzanas -&gt; 400</li>
+				<li>Cerezas -&gt; 475</li>
+			</ul>
+		</section>
+
+		<section class="slide">
 			<header> Iteración 2 </header>
-			<p>10 minutos para añadir un descuento</p>
+			<p>8 minutos para añadir un descuento</p>
 			<ul>
 				<li>La misma entrada y salida que antes</li>
 				<li>Cada dos cerezas te ahorras 20 céntimos</li>
@@ -122,15 +117,32 @@
 		</section>
 
 		<section class="slide">
-			<header> Iteración 3 </header>
-			<p>10 minutos para permitir leer en formato CSV</p>
+			<header> Iteración 2 </header>
+			<p>Demo</p>
 			<ul>
-				<li>Aceptar los valores separados por comas</li>
+				<li>Bananas -&gt; 150</li>
+				<li>Cerezas -&gt; 225</li>
+				<li>Manzanas -&gt; 325</li>
+				<li>Cerezas -&gt; 380</li>
+				<li>Cerezas -&gt; 455</li>
+				<li>Cerezas -&gt; 510</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<header> Iteración 3 </header>
+			<p>8 minutos para permitir leer en formato CSV</p>
+			<ul>
+				<li>Aceptad los valores separados por comas</li>
 				<li>Los mismos precios que la iteración 2</li>
 			</ul>
+			<p/>
 			<p>Test de aceptación</p>
 			<ul>
 				<li>Manzanas, Cerezas, Bananas -&gt; 325</li>
+			</ul>
+				<p>Test de aceptación</p>
+			<ul>
 				<li>Cerezas, Cerezas -&gt; 130</li>
 			</ul>
 		</section>
@@ -155,8 +167,23 @@
 		</section>
 
 		<section class="slide">
+			<header> Iteración 3a </header>
+			<p>Demo</p>
+			<ul>
+				<li>Cerezas -&gt; 75</li>
+				<li>Cerezas -&gt; 120</li>
+				<li>Bananas -&gt; 270</li>
+				<li>Bananas -&gt; 270</li>
+				<li>Cerezas -&gt; 345</li>
+				<li>Bananas -&gt; 495</li>
+				<li>Cerezas -&gt; 540</li>
+				<li>Bananas -&gt; 540</li>
+			</ul>
+		</section>
+
+		<section class="slide">
 			<header> Iteración 4 </header>
-			<p>10 minutos para soportar localización:</p>
+			<p>8 minutos para soportar localización:</p>
 			<ul>
 				<li>Las tiendas de Mercadona siguen notificadas del retraso en
 					el formato CSV</li>
@@ -176,8 +203,21 @@
 		</section>
 
 		<section class="slide">
+			<header> Iteración 4 </header>
+			<p>Demo</p>
+			<ul>
+				<li>Mele -&gt; 100</li>
+				<li>Pommes -&gt; 200</li>
+				<li>Manzanas -&gt; 300</li>
+				<li>Bananas -&gt; 450</li>
+				<li>Cerezas -&gt; 525</li>
+				<li>Bananas -&gt; 525</li>
+			</ul>
+		</section>
+
+		<section class="slide">
 			<header> Iteración 5 </header>
-			<p>10 minutos para soportar descuentos separados para diferentes
+			<p>8 minutos para soportar descuentos separados para diferentes
 				nombres:</p>
 			<ul>
 				<li>El cambio a formato CSV viene en la siguiente iteración</li>
@@ -199,14 +239,13 @@
 
 		<section class="slide">
 			<header> Iteración 5a </header>
-			<p>10 minutos para soportar descuentos separados para diferentes
-				nombres:</p>
+			<p>8 minutos para soportar descuentos separados</p>
 			<ul>
 				<li>UN NUEVO CAMBIO!</li>
 				<li>3 x Pommes se descuenta a 2 euros</li>
 				<li>2 x Mele se descuenta a 1 euro</li>
 			</ul>
-			<p>Test de aceptación</p>
+			Test de aceptación
 			<ul>
 				<li>Mele -&gt; 100</li>
 				<li>Pommes -&gt; 200</li>
@@ -221,8 +260,25 @@
 		</section>
 
 		<section class="slide">
+			<header> Iteración 5a </header>
+			<p>Demo</p>
+			<ul>
+				<li>Mele -&gt; 100</li>
+				<li>Pommes -&gt; 200</li>
+				<li>Pommes -&gt; 300</li>
+				<li>Manzanas -&gt; 400</li>
+				<li>Pommes -&gt; 400</li>
+				<li>Mele -&gt; 400</li>
+				<li>Cerezas -&gt; 475</li>
+				<li>Cerezas -&gt; 530</li>
+				<li>Bananas -&gt; 680</li>
+				<li>Bananas -&gt; 680</li>
+			</ul>
+		</section>
+
+		<section class="slide">
 			<header> Iteración 6 </header>
-			<p>10 minutos para terminar el formato CSV y aplicar
+			<p>8 minutos para terminar el formato CSV y aplicar
 				super-descuento:</p>
 			<ul>
 				<li>Soportar entrada tanto en formato línea como CSV</li>
@@ -241,54 +297,36 @@
 			</ul>
 		</section>
 
+			<section class="slide">
+			<header> Iteración 6 </header>
+			<p>Demo</p>
+			<ul>
+				<li>Mele, Pommes, Pommes, Manzanas, Mele, Pommes -&gt; 150</li>
+			</ul>
+		</section>
+
 		<section class="slide">
 			<header class=title> Conclusiones </header>
-			<div class="comments">
-				<ul>
-					<li>Quien ha acabado?</li>
-					<li>Alguien ha hecho tests? Y TDD?</li>
-					<li>Alguien ha usado repositorio de codigo?</li>
-					<li>Que problemas os habeis encontrado?</li>
-				</ul>
-			</div>
+			<div class="comments">Conclusiones: quien ha acabado? alguien quiere poner su solucion, gist? carencias tecnicas? TDD? tests? VCS? Que problemas os habeis encontrado? lenguajes? hashes? lambdas? ifs?, requisitos cambiantes no apuntados, ir tarde por mejorar</div>
 		</section>
 
 		<section class="slide">
 			<header class=title> Eliminar Waste </header>
-			<div class="comments">
-				<ul>
-					<li>Defects and Quality</li>
-					<li>80 - 20</li>
-					<li>bureaucracy</li>
-					<li>unnecessary code and functionality</li>
-					<li>delay in the software development process</li>
-					<li>unclear requirements</li>
-					<li>slow internal communication</li>
-				</ul>
-			</div>
+			<div class="comments">Defects and Quality, bureaucracy, unnecessary code and functionality, delay in the software development process, unclear requirements, slow internal communication</div>
 		</section>
 
 		<section class="slide">
 			<header class=title>
 				Centrarse en el valor
-				<div class="comments">Que es valor?</div>
 			</header>
 		</section>
 
 		<section class="slide">
 			<header class=title> Entregar rápido </header>
-			<div class="comments">Esperar al ultimo momento responsable</div>
 		</section>
 
 		<section class="slide">
 			<header class=title> Decidir tarde </header>
-			<div class="comments">As software development is always
-				associated with some uncertainty, better results should be achieved
-				with an options-based approach, delaying decisions as much as
-				possible until they can be made based on facts and not on uncertain
-				assumptions and predictions. The more complex a system is, the more
-				capacity for change should be built into it, thus enabling the delay
-				of important and crucial commitments.</div>
 		</section>
 
 
@@ -297,18 +335,16 @@
 			<p>
 			<pre>
 BEGIN {RS=",|\n"}
-/Apples|Pommes|Mele/{total+=100; apples++; if (apples%4==0) total-=100;}
+/Apples|Pommes|Mele/{total+=100; apples++; 
+if (apples%4==0) total-=100;}
 /Pommes/{pommes++; if (pommes%3==0) total-=100; }
 /Mele/{mele++; if (mele%2==0) total-=50;}
-/Cherries/{total+=75; cherries++; if (cherries%2==0) total-=20;}
-/Bananas/{total+=150; bananas++; if (bananas%2==0) total-=150;}
+/Cherries/{total+=75; cherries++; 
+if (cherries%2==0) total-=20;}
+/Bananas/{total+=150; bananas++; 
+if (bananas%2==0) total-=150;}
 //{fruit++; if (fruit%5==0) total-=200;}
 END{print total;}</pre>
-			<p>
-				<a
-					href="http://gojko.net/2011/05/26/sc2011-lean-code-solution-in-awk/"
-					target="_blank" class="link">Solución de Gojko Adzic</a>
-			</p>
 		</section>
 
 		<section class="slide">
@@ -326,23 +362,38 @@ END{print total;}</pre>
   DISCOUNT = { 'A' => {:quantity => 3, :discount => 20 }, 
   'B' => { :quantity => 2, :discount => 15 } }
 </pre>
-			<p>
-				<a href="https://github.com/chrismdp/checkout-kata" target="_blank"
-					class="link">Soluciones de Chris Parsons</a> y <a
-					href="https://github.com/nhpatt/Checkout" target="_blank"
-					class="link">Soluciones de nhpatt</a>
-			</p>
 		</section>
 
 		<section class="slide">
 			<p>"The quality of your software is inversely proportional to how
 				often you have to say no to your customer."</p>
-			<p class="align-right">-- Uncle Bob Martin</p>
+			<p>-- Uncle Bob Martin</p>
+		</section>
+		<section class="slide">
+			<header class=title> ¿? </header>
+		</section>
+		<section class="slide">
+			<header class=title> Gracias por venir! </header>
+		</section>
+		<section class="slide">
+			<header>Referencias</header>
+				<p>
+					<a class="link" target="_blank"
+						href="http://www.amazon.com/exec/obidos/ASIN/0321150783/poppendieckco-20">Lean
+						Software Development: An Agile Toolkit</a>
+				</p>
+					<p>
+					<a class="link" target="_blank"
+						href="http://www.amazon.com/exec/obidos/ASIN/0321150783/poppendieckco-20">The Lean Mindset: Ask the right questions</a>
+				</p>
+		</section>
+		<section class="slide">
+			<header class=title> Lean Code </header>
 		</section>
 
 	</div>
 	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		src="../js/jquery.js"></script>
 	<script src="../js/presentation.js"></script>
 </body>
 </html>

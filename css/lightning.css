@@ -3,21 +3,16 @@
 	-moz-transition: all 0s ease-in-out;
 	-o-transition: all 0s ease-in-out;
 	transition: all 0s ease-in-out;
-	width: 70%;
-	height: 80%;
+	width: 100%;
+	top: 0%;
+	margin-top: 0px;
+	height: 100%;
 	overflow: visible;
 }
 
 .slide.current {
 	margin-left: 0px;
-	left: 15%;
-}
-
-.note {
-	font-size: 20px;
-	color: white;
-	bottom: -10%;
-	position: absolute;
+	left: 0%;
 }
 
 .slide.left-slide {
@@ -28,16 +23,14 @@
 	margin-left: 1100px;
 }
 
+.lightningImage {
+	width: 400px;
+}
+
 .slide:nth-child(even) {
-	border-radius: 30px;
-	-moz-border-radius: 30px;
+	border-radius: 0px;
 }
 
 .slide:nth-child(odd) {
-	border-radius: 30px;
-	-moz-border-radius: 30px;
-}
-
-.lightningImage {
-	width: 400px;
+	border-radius: 0px;
 }
